@@ -1,5 +1,5 @@
 ## downloading & installing installing streamlit packages
-$ pip install streamlit
+pip install streamlit
 
 import streamlit as st
 
