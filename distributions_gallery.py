@@ -23,7 +23,7 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-st.title(" :orange[Theoritical Distributions] Interactive Gallery")
+st.title(" :red[Theoritical Distributions] Interactive Gallery")
 
 # Setting random seed
 theseed = st.number_input('Enter a Random Seed', min_value=0,step=1)
