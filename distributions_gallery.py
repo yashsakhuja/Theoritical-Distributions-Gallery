@@ -26,7 +26,7 @@ st.markdown("""
 st.title(" :orange[Theoritical Distributions] Interactive Gallery")
 
 # Setting random seed
-theseed = st.number_input('Enter a Random Seed', min_value=0)
+theseed = st.number_input('Enter a Random Seed', min_value=0,step=1)
 np.random.seed(theseed)
 
 # Add whitespace using Markdown
@@ -41,9 +41,9 @@ with normal:
     col1, col2 = st.columns(2)
 
     with col1:
-        norm_mean = st.number_input('Enter Mean/Loc', min_value=0.0, key='norm_mean')
-        norm_sd = st.number_input('Enter Standard Deviation /Scale', min_value=1.0, key='norm_sd')
-        norm_size = st.slider('Select Sample Size', min_value=1, max_value=1000, key='norm_size')
+        norm_mean = st.number_input('Enter Mean/Loc', min_value=0.0, value=0.0, key='norm_mean')
+        norm_sd = st.number_input('Enter Standard Deviation /Scale', min_value=0.0, value=1.0, key='norm_sd')
+        norm_size = st.slider('Select Sample Size', min_value=1, max_value=1000, value=500, key='norm_size')
 
         np.random.seed(theseed)
         norm_data = np.random.normal(loc=norm_mean, scale=norm_sd, size=norm_size)
@@ -67,8 +67,8 @@ with poisson:
     col1, col2 = st.columns(2)
 
     with col1:
-        poisson_mean = st.number_input('Enter Mean/Loc', min_value=0.1, key='poisson_mean')
-        poisson_size = st.slider('Select Sample Size', min_value=1, max_value=1000, key='poisson_size')
+        poisson_mean = st.number_input('Enter Mean/Loc', min_value=0.1, value=0.1, key='poisson_mean')
+        poisson_size = st.slider('Select Sample Size', min_value=1, max_value=1000, value=500, key='poisson_size')
 
         np.random.seed(theseed)
         poisson_data = np.random.poisson(lam=poisson_mean, size=poisson_size)
@@ -97,8 +97,8 @@ with exponential:
     col2, col3 = st.columns(2)
 
     with col2:
-        expon_scale = st.number_input('Enter Scale', min_value=0.1, key='expon_scale')
-        expon_size = st.slider('Select Sample Size', min_value=1, max_value=1000, key='expon_size')
+        expon_scale = st.number_input('Enter Scale', min_value=0.1,value=0.1, key='expon_scale')
+        expon_size = st.slider('Select Sample Size', min_value=1, max_value=1000, value=500, key='expon_size')
 
         np.random.seed(theseed)
 
@@ -123,9 +123,9 @@ with uniform:
     col2, col3 = st.columns(2)
 
     with col2:
-        uniform_low = st.number_input('Enter Low', key='uniform_low')
-        uniform_high = st.number_input('Enter High', key='uniform_high')
-        uniform_size = st.slider('Select Sample Size', min_value=1, max_value=1000, key='uniform_size')
+        uniform_low = st.number_input('Enter Low',value=0.0, key='uniform_low')
+        uniform_high = st.number_input('Enter High',value=1.0, key='uniform_high')
+        uniform_size = st.slider('Select Sample Size', min_value=1, max_value=1000, value=500, key='uniform_size')
 
         np.random.seed(theseed)
 
@@ -155,9 +155,9 @@ with binomial:
     col2, col3 = st.columns(2)
 
     with col2:
-        bino_n = st.number_input('Enter n', min_value=0, key='bino_n')
-        bino_p = st.number_input('Select p', min_value=0.0, max_value=1.0, key='bino_p')
-        bino_size = st.slider('Select Sample Size', min_value=1, max_value=1000, key='bino_size')
+        bino_n = st.number_input('Enter n', min_value=0, value=5, key='bino_n')
+        bino_p = st.number_input('Select p', min_value=0.0, max_value=1.0, value=0.5, key='bino_p')
+        bino_size = st.slider('Select Sample Size', min_value=1, max_value=1000, value=500, key='bino_size')
 
         np.random.seed(theseed)
 
@@ -181,9 +181,9 @@ with uniform_dis:
     col2, col3 = st.columns(2)
 
     with col2:
-        d_uniform_low = st.number_input('Enter Low', min_value=-100, max_value=100, key='d_uniform_low')
-        d_uniform_high = st.number_input('Enter High', min_value=-100, max_value=100, key='d_uniform_high')
-        d_uniform_size = st.slider('Select Sample Size', min_value=1, max_value=1000, key='d_uniform_size')
+        d_uniform_low = st.number_input('Enter Low', min_value=-100, max_value=100, value=1, key='d_uniform_low')
+        d_uniform_high = st.number_input('Enter High', min_value=-100, max_value=100, value=7, key='d_uniform_high')
+        d_uniform_size = st.slider('Select Sample Size', min_value=1, max_value=1000,value=500, key='d_uniform_size')
 
         np.random.seed(theseed)
 
