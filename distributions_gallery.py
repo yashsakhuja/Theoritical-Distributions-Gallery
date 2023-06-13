@@ -1,14 +1,13 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly as pl
-import seaborn as sns
+#import plotly.express as px
+#import plotly as pl
+#import seaborn as sns
 import streamlit as st
-import scipy.stats as stats
+#import scipy.stats as stats
 import altair as alt
 from numpy.random import seed
-import random
+#import random
 
 st.set_page_config(layout='wide')
 
