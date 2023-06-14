@@ -4,7 +4,7 @@ import numpy as np
 # import plotly as pl
 # import seaborn as sns
 import streamlit as st
-#import scipy.stats as stats
+import scipy.stats as stats
 import altair as alt
 from numpy.random import seed
 # import random
@@ -23,7 +23,7 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-st.title(" :red[Theoritical Distributions] Interactive Gallery")
+st.title(" :orange[Theoritical Distributions] Interactive Gallery")
 
 # Setting random seed
 theseed = st.number_input('Enter a Random Seed', min_value=0, step=1)
@@ -302,3 +302,4 @@ with uniform_dis:
     with col3:
         st.altair_chart(chart_d_uniform, use_container_width=True)
 
+st.write("Designed & Coded by: Yash Sakhuja with Streamlit | Reach out for Open Source Contribution | LinkedIn: Yash Sakhuja")
