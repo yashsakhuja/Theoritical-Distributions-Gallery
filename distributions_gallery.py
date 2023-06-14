@@ -4,7 +4,7 @@ import numpy as np
 # import plotly as pl
 # import seaborn as sns
 import streamlit as st
-import scipy.stats as stats
+#import scipy.stats as stats
 import altair as alt
 from numpy.random import seed
 # import random
